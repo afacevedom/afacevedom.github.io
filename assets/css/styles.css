@@ -119,3 +119,36 @@
 .inner-footer-cta h3{font-size:24px;margin:0 0 5px}.inner-footer-cta p{font-size:12px;color:var(--muted);margin:0}
 @media(max-width:760px){.inner-hero{padding:70px 0 50px}.inner-section{padding:55px 0}.inner-section-head{display:block}.inner-section-head>p{margin-top:18px}.inner-cards,.credential-grid{grid-template-columns:1fr}.capability-list{grid-template-columns:1fr 1fr}.project-case{grid-template-columns:1fr}.project-case-visual{min-height:210px}.inner-footer-cta{align-items:flex-start;flex-direction:column}}
 @media(max-width:460px){.capability-list{grid-template-columns:1fr}.inner-card{padding:20px}.project-case-copy{padding:21px}.inner-footer-cta{padding:23px}}
+
+/* LIVE DATA / FRANKFURTER */
+.live-market{padding-top:76px;padding-bottom:76px}
+.market-panel{border:1px solid var(--line);background:linear-gradient(135deg,var(--panel),#101923);position:relative;overflow:hidden}
+.market-panel:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent)}
+.market-panel-head,.market-panel-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 22px}
+.market-panel-head{border-bottom:1px solid var(--line)}
+.market-panel-head>div{display:flex;align-items:center;gap:9px}
+.market-live-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px #b7f36b;animation:marketPulse 1.8s ease-in-out infinite}
+.market-label{font:10px var(--mono);letter-spacing:.13em;color:var(--muted)}
+.market-refresh{border:1px solid var(--line);background:transparent;color:var(--text);padding:8px 12px;font:10px var(--mono);cursor:pointer;transition:.2s}
+.market-refresh:hover{border-color:var(--accent);color:var(--accent)}
+.market-refresh:disabled{opacity:.5;cursor:wait}
+.market-refresh span{font-size:15px;margin-right:5px;display:inline-block}
+.market-rates{display:grid;grid-template-columns:repeat(2,1fr)}
+.market-rate{padding:27px 25px 24px;min-width:0}
+.market-rate+ .market-rate{border-left:1px solid var(--line)}
+.market-currency{display:flex;align-items:center;gap:12px}
+.currency-symbol{width:38px;height:38px;display:grid;place-items:center;border:1px solid #43583d;color:var(--accent);font:20px var(--mono)}
+.currency-symbol.euro{color:var(--blue);border-color:#40566e}
+.market-currency strong{font:13px var(--mono);letter-spacing:.08em}
+.market-currency strong span{color:var(--muted);font-weight:400}
+.market-currency small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.market-value{font:clamp(25px,3.2vw,38px) var(--display);letter-spacing:-.04em;margin:22px 0 4px;overflow-wrap:anywhere}
+.market-date{font:10px var(--mono);color:var(--muted)}
+.market-panel-foot{border-top:1px solid var(--line);font:9px var(--mono);color:var(--muted);flex-wrap:wrap}
+.market-panel-foot [data-market-status]{color:var(--accent)}
+.market-panel.is-loading .market-refresh span{animation:marketSpin .8s linear infinite}
+.market-panel.is-stale .market-panel-foot [data-market-status]{color:#e5bd70}
+@keyframes marketPulse{50%{opacity:.35;box-shadow:0 0 3px #b7f36b}}
+@keyframes marketSpin{to{transform:rotate(360deg)}}
+@media(max-width:600px){.live-market{padding-top:58px;padding-bottom:58px}.market-rates{grid-template-columns:1fr}.market-rate{padding:22px}.market-rate+.market-rate{border-left:0;border-top:1px solid var(--line)}.market-panel-head,.market-panel-foot{padding:14px 17px}.market-panel-foot{display:grid;gap:6px}}
+@media(prefers-reduced-motion:reduce){.market-live-dot,.market-panel.is-loading .market-refresh span{animation:none}}

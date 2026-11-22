@@ -8,6 +8,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/services/frankfurter.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -63,6 +64,31 @@
   </section>
 
   <section class="ticker"><div class="ticker-track">SOFTWARE ARCHITECTURE <b>✳</b> CLOUD ENGINEERING <b>✳</b> DEVOPS & AUTOMATION <b>✳</b> DATA & ANALYTICS <b>✳</b> BACKEND SYSTEMS <b>✳</b> SOFTWARE ARCHITECTURE <b>✳</b></div></section>
+  <section class="live-market section container" aria-labelledby="market-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">LIVE DATA / 01</p><h2 id="market-title">Market <em>pulse.</em></h2></div>
+      <p class="section-intro">Indicadores de referencia para USD y EUR frente al peso colombiano, consultados desde Frankfurter.</p>
+    </div>
+    <div class="market-panel" data-market-widget>
+      <div class="market-panel-head">
+        <div><span class="market-live-dot"></span><span class="market-label">EXCHANGE RATE MONITOR</span></div>
+        <button class="market-refresh" type="button" data-market-refresh><span aria-hidden="true">↻</span> Actualizar</button>
+      </div>
+      <div class="market-rates">
+        <article class="market-rate" data-currency="USD">
+          <div class="market-currency"><span class="currency-symbol">$</span><div><strong>USD <span> / COP</span></strong><small>Dólar estadounidense</small></div></div>
+          <div class="market-value" data-rate-value>Consultando…</div>
+          <div class="market-date" data-rate-date>Conectando con Frankfurter</div>
+        </article>
+        <article class="market-rate" data-currency="EUR">
+          <div class="market-currency"><span class="currency-symbol euro">€</span><div><strong>EUR <span> / COP</span></strong><small>Euro</small></div></div>
+          <div class="market-value" data-rate-value>Consultando…</div>
+          <div class="market-date" data-rate-date>Conectando con Frankfurter</div>
+        </article>
+      </div>
+      <div class="market-panel-foot"><span data-market-status role="status" aria-live="polite">Consultando tipos de referencia…</span><span>Fuente: Frankfurter API · No son cotizaciones en tiempo real</span></div>
+    </div>
+  </section>
 
   <section class="section container">
     <div class="section-heading"><div><p class="eyebrow">01 / ENGINEERING DOMAINS</p><h2>Technology is connected.<br><em>So is the way I work.</em></h2></div><p class="section-intro">Una mirada integral para entender el contexto, diseñar la solución y acompañar su evolución.</p></div>
