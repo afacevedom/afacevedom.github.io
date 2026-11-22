@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <script defer src="assets/js/main.js"></script>
   <script defer src="assets/js/services/frankfurter.js"></script>
+  <script defer src="assets/js/services/hackernews.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -87,6 +88,23 @@
         </article>
       </div>
       <div class="market-panel-foot"><span data-market-status role="status" aria-live="polite">Consultando tipos de referencia…</span><span>Fuente: Frankfurter API · No son cotizaciones en tiempo real</span></div>
+    </div>
+  </section>
+
+  <section class="live-news section container" aria-labelledby="tech-radar-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">LIVE FEED / 02</p><h2 id="tech-radar-title">Tech <em>radar.</em></h2></div>
+      <p class="section-intro">Conversaciones y noticias tecnológicas destacadas de la comunidad Hacker News, actualizadas desde su API pública.</p>
+    </div>
+    <div class="news-panel" data-hn-widget>
+      <div class="news-panel-head">
+        <div><span class="market-live-dot"></span><span class="market-label">COMMUNITY SIGNAL / TOP STORIES</span></div>
+        <button class="market-refresh" type="button" data-hn-refresh><span aria-hidden="true">↻</span> Actualizar</button>
+      </div>
+      <div class="news-grid" data-hn-list aria-live="polite">
+        <div class="news-loading"><span class="news-skeleton"></span><span class="news-skeleton"></span><span class="news-skeleton"></span></div>
+      </div>
+      <div class="news-panel-foot"><span data-hn-status role="status" aria-live="polite">Consultando historias destacadas…</span><a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Abrir Hacker News ↗</a></div>
     </div>
   </section>
 
