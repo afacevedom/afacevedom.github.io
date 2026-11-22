@@ -184,3 +184,40 @@
 @keyframes newsShimmer{to{background-position:-200% 0}}
 @media(max-width:600px){.live-news{padding-top:10px;padding-bottom:65px}.news-grid{grid-template-columns:1fr}.news-card:nth-child(odd){border-right:0}.news-card{padding:21px;min-height:170px}.news-panel-head,.news-panel-foot{padding:14px 17px}.news-panel-foot{display:grid;gap:8px}}
 @media(prefers-reduced-motion:reduce){.news-skeleton{animation:none}}
+
+/* LIVE DATA / SPACEFLIGHT NEWS */
+.live-space{padding-top:26px;padding-bottom:88px}
+.space-panel{border:1px solid var(--line);background:linear-gradient(135deg,var(--panel),#101923);position:relative;overflow:hidden}
+.space-panel:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:#8d9eff}
+.space-panel-head,.space-panel-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 22px}
+.space-panel-head{border-bottom:1px solid var(--line)}
+.space-panel-head>div{display:flex;align-items:center;gap:9px}
+.space-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.space-card{min-width:0;display:grid;grid-template-columns:minmax(110px,36%) 1fr;border-bottom:1px solid var(--line);transition:background .2s;animation:spaceCardIn .45s ease both;animation-delay:calc(var(--space-card-index,0)*70ms)}
+.space-card:nth-child(odd){border-right:1px solid var(--line)}
+.space-card:hover{background:#ffffff05}
+.space-card-image{display:block;min-height:190px;background:radial-gradient(circle at 50% 45%,#253c53,#111923 72%);overflow:hidden;position:relative}
+.space-card-image:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#08101c55,transparent 55%);pointer-events:none}
+.space-card-image img{width:100%;height:100%;min-height:190px;position:absolute;inset:0;object-fit:cover;transition:transform .5s ease}
+.space-card:hover .space-card-image img{transform:scale(1.045)}
+.space-card-image-empty{display:grid;place-items:center;color:#a9b9d0;font:10px var(--mono);letter-spacing:.15em}
+.space-card-body{padding:19px 21px;display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.space-card-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;width:100%;margin-bottom:12px;color:var(--muted);font:9px var(--mono)}
+.space-source{color:#a9b9d0;letter-spacing:.1em;text-transform:uppercase}
+.space-card-title{color:var(--text);font:500 16px/1.38 var(--display);text-decoration:none}
+.space-card-title:hover{color:var(--accent)}
+.space-card-summary{font-size:11px;line-height:1.65;color:var(--muted);margin:11px 0 14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.space-card-link{margin-top:auto;color:var(--accent);font:9px var(--mono);text-decoration:none}
+.space-card-link:hover{text-decoration:underline}
+.space-panel-foot{border-top:1px solid var(--line);font:9px var(--mono);color:var(--muted);flex-wrap:wrap}
+.space-panel-foot [data-spaceflight-status]{color:var(--accent)}
+.space-panel-foot>a{color:var(--muted);text-decoration:none}
+.space-panel-foot>a:hover{color:var(--accent)}
+.space-panel.is-loading .market-refresh span{animation:marketSpin .8s linear infinite}
+.space-panel.is-stale .space-panel-foot [data-spaceflight-status]{color:#e5bd70}
+.space-loading{grid-column:1/-1;padding:25px;display:grid;gap:12px}
+.space-empty{grid-column:1/-1;padding:30px;color:var(--muted);font-size:13px}
+@keyframes spaceCardIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.space-card{grid-template-columns:1fr}.space-card-image,.space-card-image img{min-height:180px;height:180px;position:relative}.space-card-image img{position:absolute}.space-card-body{padding:18px 20px}}
+@media(max-width:600px){.live-space{padding-top:10px;padding-bottom:65px}.space-grid{grid-template-columns:1fr}.space-card:nth-child(odd){border-right:0}.space-panel-head,.space-panel-foot{padding:14px 17px}.space-panel-foot{display:grid;gap:8px}}
+@media(prefers-reduced-motion:reduce){.space-card{animation:none}.space-card-image img{transition:none}}

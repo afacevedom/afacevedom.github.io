@@ -10,6 +10,7 @@
   <script defer src="assets/js/main.js"></script>
   <script defer src="assets/js/services/frankfurter.js"></script>
   <script defer src="assets/js/services/hackernews.js"></script>
+  <script defer src="assets/js/services/spaceflight.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -106,6 +107,24 @@
       </div>
       <div class="news-panel-foot"><span data-hn-status role="status" aria-live="polite">Consultando historias destacadas…</span><a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Abrir Hacker News ↗</a></div>
     </div>
+  </section>
+
+  <section class="live-space section container" aria-labelledby="spaceflight-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">LIVE FEED / 03</p><h2 id="spaceflight-title">Space <em>watch.</em></h2></div>
+      <p class="section-intro">Actualidad de exploración espacial, lanzamientos y ciencia, agregada por Spaceflight News.</p>
+    </div>
+    <div class="space-panel" data-spaceflight-widget>
+      <div class="space-panel-head">
+        <div><span class="market-live-dot"></span><span class="market-label">SPACE & SCIENCE / LATEST ARTICLES</span></div>
+        <button class="market-refresh" type="button" data-spaceflight-refresh><span aria-hidden="true">↻</span> Actualizar</button>
+      </div>
+      <div class="space-grid" data-spaceflight-list aria-live="polite">
+        <div class="space-loading"><span class="news-skeleton"></span><span class="news-skeleton"></span><span class="news-skeleton"></span></div>
+      </div>
+      <div class="space-panel-foot"><span data-spaceflight-status role="status" aria-live="polite">Consultando artículos recientes…</span><a href="https://api.spaceflightnewsapi.net/v4/docs/" target="_blank" rel="noopener noreferrer">Spaceflight News ↗</a></div>
+    </div>
+    <p class="micro-note">Titulares y metadatos proporcionados por Spaceflight News API (The Space Devs). El contenido completo pertenece a sus medios originales.</p>
   </section>
 
   <section class="section container">
