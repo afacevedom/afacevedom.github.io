@@ -36,6 +36,12 @@ portfolio_ingenieria/
 
 También puedes usar un repositorio llamado `TU-USUARIO.github.io` para publicarlo en la raíz de tu dominio de GitHub Pages.
 
+## Páginas incluidas
+
+- Inicio y laboratorio retro.
+- Perfil, arquitectura, Cloud & DevOps, desarrollo y Datos & IA.
+- Experiencia, proyectos, tecnologías, certificaciones y contacto.
+
 ## Personalización recomendada
 
 - Reemplaza `ENGINEERING.LAB` por la marca o nombre profesional que quieras mostrar.
