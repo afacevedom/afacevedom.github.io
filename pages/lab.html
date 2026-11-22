@@ -9,4 +9,7 @@ Welcome, engineer.</div><form class="lab-form" id="lab-form"><input id="command"
 const form=document.getElementById('lab-form'),input=document.getElementById('command'),out=document.getElementById('output');
 const commands={help:'Comandos disponibles:\\n help       muestra esta ayuda\\n about      filosofía del laboratorio\\n skills     áreas de trabajo\\n stack      tecnologías principales\\n clear      limpia la terminal\\n date       muestra la fecha local',about:'La ingeniería es pensamiento sistémico, diseño consciente y mejora continua.',skills:'Arquitectura · Cloud & DevOps · Desarrollo · Datos & IA · Liderazgo técnico',stack:'Java · Python · JavaScript · Spring Boot · Django · AWS · OCI · Docker · Linux · PostgreSQL',date:new Date().toLocaleDateString('es-CO')};
 form.addEventListener('submit',e=>{e.preventDefault();let cmd=input.value.trim().toLowerCase();if(!cmd)return;if(cmd==='clear'){out.textContent='';input.value='';return;}let result=commands[cmd]||'Comando no reconocido. Escribe help para consultar los comandos.';out.textContent+='\\n\\nguest@engineering:~$ '+cmd+'\\n'+result;input.value='';out.scrollTop=out.scrollHeight;});
-</script></body></html>
+</script>
+<script defer src="../assets/js/config/cloudflare-analytics.config.js"></script>
+<script defer src="../assets/js/services/cloudflare-analytics.js"></script>
+</body></html>
