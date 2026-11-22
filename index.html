@@ -11,6 +11,7 @@
   <script defer src="assets/js/services/frankfurter.js"></script>
   <script defer src="assets/js/services/hackernews.js"></script>
   <script defer src="assets/js/services/spaceflight.js"></script>
+  <script defer src="assets/js/services/wikimedia.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -125,6 +126,24 @@
       <div class="space-panel-foot"><span data-spaceflight-status role="status" aria-live="polite">Consultando artículos recientes…</span><a href="https://api.spaceflightnewsapi.net/v4/docs/" target="_blank" rel="noopener noreferrer">Spaceflight News ↗</a></div>
     </div>
     <p class="micro-note">Titulares y metadatos proporcionados por Spaceflight News API (The Space Devs). El contenido completo pertenece a sus medios originales.</p>
+  </section>
+
+  <section class="live-commons section container" aria-labelledby="commons-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">LIVE VISUALS / 04</p><h2 id="commons-title">Visual <em>discovery.</em></h2></div>
+      <p class="section-intro">Una selección visual que cambia cada día: infraestructura, computación, ciencia y exploración espacial, desde Wikimedia Commons.</p>
+    </div>
+    <div class="commons-panel" data-wikimedia-widget>
+      <div class="commons-panel-head">
+        <div><span class="market-live-dot"></span><span class="market-label">OPEN KNOWLEDGE / FREE MEDIA</span></div>
+        <button class="market-refresh" type="button" data-wikimedia-refresh><span aria-hidden="true">↻</span> Actualizar</button>
+      </div>
+      <div class="commons-grid" data-wikimedia-list aria-live="polite">
+        <div class="commons-loading"><span class="news-skeleton"></span><span class="news-skeleton"></span><span class="news-skeleton"></span></div>
+      </div>
+      <div class="commons-panel-foot"><span data-wikimedia-status role="status" aria-live="polite">Buscando imágenes y licencias…</span><a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">Explorar Wikimedia Commons ↗</a></div>
+    </div>
+    <p class="micro-note">Las imágenes se muestran con atribución y enlace a su ficha original. Consulta allí la licencia y condiciones de reutilización de cada archivo.</p>
   </section>
 
   <section class="section container">
