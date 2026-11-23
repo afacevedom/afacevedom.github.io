@@ -159,4 +159,5 @@
 
   refreshButton?.addEventListener('click', () => load(true));
   load();
+  window.PortfolioLiveRefresh?.register('Wikimedia Commons', 24 * 60 * 60 * 1000, () => load(true), refreshButton, CACHE_KEY);
 })();

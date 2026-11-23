@@ -144,4 +144,5 @@
 
   refreshButton.addEventListener('click', () => load(true));
   load();
+  window.PortfolioLiveRefresh?.register('Spaceflight News', 30 * 60 * 1000, () => load(true), refreshButton, CACHE_KEY);
 })();

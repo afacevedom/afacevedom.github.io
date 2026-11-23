@@ -94,4 +94,5 @@
 
   refreshButton.addEventListener('click', () => load(true));
   load();
+  window.PortfolioLiveRefresh?.register('Frankfurter', 6 * 60 * 60 * 1000, () => load(true), refreshButton, CACHE_KEY);
 })();
